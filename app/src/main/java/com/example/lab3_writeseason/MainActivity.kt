@@ -6,6 +6,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
@@ -44,12 +45,16 @@ fun SeasonScreen(modifier: Modifier = Modifier) {
     var text by remember { mutableStateOf("") }
     var result by remember { mutableStateOf("") }
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
+        Text("Введите цифру и получите время года", modifier =
+            Modifier.padding(10.dp)
+        )
         TextField(
             value = text,
-            onValueChange = {newText -> text=newText},
-            label = {Text("Введите текст")}
+            onValueChange = {newText -> text=newText}
         )
-        Text(result)
+        Text(result, modifier =
+            Modifier.padding(10.dp)
+        )
         Button(
             onClick = {result=text}
         ){
