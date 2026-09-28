@@ -63,6 +63,16 @@ fun SeasonScreen(modifier: Modifier = Modifier) {
     }
 }
 
+fun getSeason(string: String): String {
+    return when (string) {
+        "1" -> "Зима"
+        "2" -> "Весна"
+        "3" -> "Лето"
+        "4" -> "Осень"
+        else -> "Ошибка"
+    }
+}
+
 @Preview(showBackground = true)
 @Composable
 fun ScreenPreview() {
