@@ -56,7 +56,7 @@ fun SeasonScreen(modifier: Modifier = Modifier) {
             Modifier.padding(10.dp)
         )
         Button(
-            onClick = {result=text}
+            onClick = {result=getSeason(text)}
         ){
             Text("Нажми")
         }
